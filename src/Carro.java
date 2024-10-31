@@ -16,6 +16,9 @@ public class Carro {
         this.numeroMotor = numeroMotor;
         this.proprietario = proprietario;
     }
+    void calculcarValorRevendante() {
+        System.out.printf("Calcular valor revenda de: %s %d%n", modelo, ano);
+    }
 
     @Override
     public String toString() {
