@@ -18,20 +18,20 @@ public class Carro {
         this.proprietario = proprietario;
         this.precoCompra = precoCompra;
     }
-    void calculcarValorRevendante() {
-        int tempoDeUsoEmanos= 2024-ano;
-        int vidaUltilEmAnos=20;
-        double valorRevendante = (precoCompra /0.8)* (vidaUltilEmAnos-tempoDeUsoEmanos);
-        if (valorRevendante<0){
-            System.out.println("O carro não pode ser revendido por não atender aos requisitos");
-            valorRevendante=0;
+
+    double calculcarValorRevendante() {
+        int tempoDeUsoEmanos = 2024 - ano;
+        int vidaUltilEmAnos = 20;
+        double valorRevendante = (precoCompra / 0.8) * (vidaUltilEmAnos - tempoDeUsoEmanos);
+        if (valorRevendante < 0) {
+            valorRevendante = 0;
         }
-        System.out.printf("Calcular valor revenda de: %s  %d%n", modelo, tempoDeUsoEmanos);
+        return valorRevendante;
     }
 
     @Override
     public String toString() {
-        return "Carro{" +  "\n" +
+        return "Carro{" + "\n" +
                 "marca=" + marca + "\n" +
                 ", modelo=" + modelo + "\n" +
                 ", ano=" + ano + "\n" +
