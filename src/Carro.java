@@ -6,8 +6,9 @@ public class Carro {
     private int numPortas;
     private String numeroMotor;
     private Proprietario proprietario;
+    private double precoCompra;
 
-    public Carro(String marca, String modelo, int ano, String cor, int numPortas, String numeroMotor, Proprietario proprietario) {
+    public Carro(String marca, String modelo, int ano, String cor, int numPortas, String numeroMotor, Proprietario proprietario, double precoCompra) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
@@ -15,9 +16,17 @@ public class Carro {
         this.numPortas = numPortas;
         this.numeroMotor = numeroMotor;
         this.proprietario = proprietario;
+        this.precoCompra = precoCompra;
     }
     void calculcarValorRevendante() {
-        System.out.printf("Calcular valor revenda de: %s %d%n", modelo, ano);
+        int tempoDeUsoEmanos= 2024-ano;
+        int vidaUltilEmAnos=20;
+        double valorRevendante = (precoCompra /0.8)* (vidaUltilEmAnos-tempoDeUsoEmanos);
+        if (valorRevendante<0){
+            System.out.println("O carro não pode ser revendido por não atender aos requisitos");
+            valorRevendante=0;
+        }
+        System.out.printf("Calcular valor revenda de: %s  %d%n", modelo, tempoDeUsoEmanos);
     }
 
     @Override
