@@ -18,9 +18,12 @@ public class Carro {
         this.proprietario = proprietario;
         this.precoCompra = precoCompra;
     }
+    int calcularTempoDeUso(){
+        return 2024 - ano;
 
+    }
     double calculcarValorRevendante() {
-        int tempoDeUsoEmanos = 2024 - ano;
+        int tempoDeUsoEmanos = calcularTempoDeUso();
         int vidaUltilEmAnos = 20;
         double valorRevendante = (precoCompra / 0.8) * (vidaUltilEmAnos - tempoDeUsoEmanos);
         if (valorRevendante < 0) {
