@@ -5,3 +5,4 @@ Este repositório contém uma coleção de exemplos, exercícios e explicações
 ## Estrutura e Conteúdo:
 - [Classes e Objetos](https://www.w3schools.com/java/java_methods.asp)
 - [Metódos](https://www.w3schools.com/java/java_methods.asp)
+- [Encapsulamento](https://www.w3schools.com/java/java_encapsulation.asp)
