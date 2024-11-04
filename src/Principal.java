@@ -2,7 +2,7 @@ public class Principal {
     public static void main(String[] args) {
         CalculadoraImc calculadoraImc1 = new CalculadoraImc();
         calculadoraImc1.setNome("John Doe");
-        Paciente paciente= new Paciente();
+        Paciente paciente= new Paciente("John Trouble", 74.30, 1.80);
         paciente.setPeso(99.5);
         paciente.setAltura(1.75);
 
