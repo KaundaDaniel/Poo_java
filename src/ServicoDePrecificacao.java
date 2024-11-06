@@ -1,5 +1,5 @@
 public class ServicoDePrecificacao {
-    double calcularValorPrecoVenda(double precoVenda){
-        return precoVenda =precoVenda* 1.10;
+    void calcularValorPrecoVenda(Produto produto, double percentualMargemLucro){
+        produto.setPrecoVenda( produto.getPrecoCusto()* ((percentualMargemLucro/100) +1));
     }
 }
